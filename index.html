@@ -48,15 +48,27 @@
             margin-bottom: 20px;
         }
 
-        .cake-container {
-            font-size: 80px;
-            margin: 15px 0;
+        /* ছবির ফ্রেমের স্টাইল */
+        .profile-container {
+            width: 150px;
+            height: 150px;
+            margin: 15px auto;
             cursor: pointer;
             transition: transform 0.3s;
+            overflow: hidden;
+            border-radius: 50%;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 20px rgba(244, 63, 94, 0.4);
         }
 
-        .cake-container:hover {
-            transform: scale(1.1);
+        .profile-container:hover {
+            transform: scale(1.05);
+        }
+
+        .profile-pic {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .message {
@@ -83,7 +95,6 @@
             transform: translateY(-2px);
         }
 
-        /* Particle styles for fireworks */
         canvas {
             position: absolute;
             top: 0;
@@ -100,8 +111,9 @@
         <h1>শুভ জন্মদিন, ভাই! 🎉</h1>
         <p class="subtitle">Happy Birthday to the Best Brother!</p>
         
-        <div class="cake-container" id="cake" onclick="startFireworks()">
-            🎂
+        <!-- কেকের জায়গায় ছবিটি সেট করা হয়েছে -->
+        <div class="profile-container" id="profile" onclick="startFireworks()">
+            <img src="bro.jpg" alt="Brother Picture" class="profile-pic">
         </div>
 
         <p class="message">
@@ -187,4 +199,3 @@
     </script>
 </body>
 </html>
-
